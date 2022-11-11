@@ -52,6 +52,7 @@ services:
 
   solid:
     image: solidproject/community-server:latest
+    command: -b https://${SOLID_DOMAIN}  -c ./config/default.json
     volumes:
       - /Solid:/data
     env_file:
